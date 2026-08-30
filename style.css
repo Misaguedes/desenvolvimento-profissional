@@ -1,0 +1,943 @@
+/* =========================
+   CORES
+========================= */
+
+:root {
+
+    --creme: #fff8f1;
+
+    --branco: #ffffff;
+
+    --preto: #1d1e1c;
+
+    --texto: #615f5c;
+
+    --cinza: #d9d9d9;
+
+    --laranja: #fa5d00;
+
+    --verde: #6959a8;
+
+}
+
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    background: var(--creme);
+
+    color: var(--preto);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* =========================
+   CAPA
+========================= */
+
+.capa {
+
+    min-height: 330px;
+
+    background: var(--preto);
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.container-capa {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+
+.ano {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--laranja);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.capa h1 {
+
+    color: var(--branco);
+
+    font-size: clamp(30px, 3.5vw, 48px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+
+.identificacao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 35px;
+
+    gap: 5px;
+
+}
+
+
+
+.identificacao strong {
+
+    color: var(--branco);
+
+    font-size: 18px;
+
+}
+
+
+
+.identificacao span {
+
+    color: #bdbdbd;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================
+   DESENVOLVIMENTO
+========================= */
+
+.container-desenvolvimento {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    gap: 45px;
+
+    align-items: start;
+
+}
+
+
+
+/* =========================
+   MENU
+========================= */
+
+.container-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+
+.container-card {
+
+    width: 100%;
+
+}
+
+
+
+.card-menu {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--branco);
+
+    color: var(--preto);
+
+    display: grid;
+
+    grid-template-columns: 38px 1fr 25px;
+
+    align-items: center;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+
+.card-menu:hover {
+
+    transform: translateX(4px);
+
+}
+
+
+
+.card-menu.ativo {
+
+    background: var(--preto);
+
+    color: var(--branco);
+
+}
+
+
+
+.card-menu .nome {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+
+.card-menu .seta {
+
+    font-size: 20px;
+
+    text-align: right;
+
+    display: inline-block;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+
+.card-menu.ativo .seta {
+
+    transform: rotate(45deg);
+
+}
+
+
+
+.card-menu .icone {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+}
+
+
+
+.card-menu .icone svg {
+
+    width: 25px;
+
+    height: 25px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.container-conteudo {
+
+    width: 100%;
+
+}
+
+
+
+.conteudo {
+
+    display: none;
+
+}
+
+
+
+.conteudo.aberto {
+
+    display: block;
+
+}
+
+
+
+.conteudo-interno {
+
+    background: var(--branco);
+
+    border-radius: 10px;
+
+    padding: 40px;
+
+}
+
+
+
+.conteudo-interno p {
+
+    max-width: 700px;
+
+    color: var(--texto);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================
+   TRILHAS
+========================= */
+
+.container-trilhas {
+
+    width: 100%;
+
+}
+
+
+
+.lista-trilhas {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+
+.lista-trilhas li {
+
+    position: relative;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px 0;
+
+    color: var(--preto);
+
+}
+
+
+
+.trilha-icone {
+
+    width: 28px;
+
+    flex-shrink: 0;
+
+    font-size: 20px;
+
+}
+
+
+
+.lista-trilhas strong {
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+}
+
+
+
+.trilha-seta {
+
+    color: var(--laranja);
+
+    font-weight: 700;
+
+    font-size: 17px;
+
+}
+
+
+
+.trilha-descricao {
+
+    color: var(--texto);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================
+   STATUS CONCLUÍDO
+========================= */
+
+.status-concluido {
+
+    float: right;
+
+    margin-left: auto;
+
+    padding-left: 8px;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    display: inline-block;
+
+}
+
+
+
+/* =========================
+   ROADMAP
+========================= */
+
+.roadmap {
+
+    width: 100%;
+
+    background: var(--branco);
+
+    border-radius: 10px;
+
+    padding: 35px 30px;
+
+}
+
+
+
+/* =========================
+   CABEÇALHO DOS MESES
+========================= */
+
+.roadmap-cabecalho {
+
+    display: grid;
+
+    grid-template-columns:
+        110px
+        repeat(4, 1fr);
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    color: var(--texto);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+
+.roadmap-cabecalho span:first-child {
+
+    visibility: hidden;
+
+}
+
+
+
+/* =========================
+   LINHAS
+========================= */
+
+.roadmap-linha {
+
+    display: grid;
+
+    grid-template-columns:
+        110px
+        1fr;
+
+    align-items: center;
+
+    min-height: 32px;
+
+    margin-bottom: 16px;
+
+}
+
+
+
+.roadmap-label {
+
+    padding-right: 15px;
+
+    color: var(--preto);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.roadmap-timeline {
+
+    position: relative;
+
+    height: 14px;
+
+    border-radius: 20px;
+
+    background: #eeeeee;
+
+    overflow: hidden;
+
+}
+
+
+
+/* Divisão dos meses */
+
+.roadmap-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+            to right,
+
+            transparent 24.8%,
+            #d2d2d2 25%,
+            transparent 25.2%,
+
+            transparent 49.8%,
+            #d2d2d2 50%,
+            transparent 50.2%,
+
+            transparent 74.8%,
+            #d2d2d2 75%,
+            transparent 75.2%
+        );
+
+}
+
+
+
+/* =========================
+   BARRAS
+========================= */
+
+.roadmap-barra {
+
+    position: absolute;
+
+    top: 0;
+
+    height: 14px;
+
+    border-radius: 20px;
+
+    z-index: 2;
+
+}
+
+
+
+/* =========================
+   DYNATRACE
+   01/09 → 06/09
+========================= */
+
+.roadmap-barra.dynatrace {
+
+    left: 0%;
+
+    width: 5%;
+
+}
+
+
+
+/* =========================
+   EXCEL + CLAUDE
+   07/09 → 18/10
+========================= */
+
+.roadmap-barra.excel {
+
+    left: 5%;
+
+    width: 34%;
+
+}
+
+
+
+/* =========================
+   KUBERNETES
+   MEADOS DE OUTUBRO → INÍCIO DE NOVEMBRO
+========================= */
+
+.roadmap-barra.kubernetes {
+
+    left: 37%;
+
+    width: 25%;
+
+}
+
+
+
+/* =========================
+   AWS
+   OUTUBRO → NOVEMBRO
+========================= */
+
+.roadmap-barra.aws {
+
+    left: 42%;
+
+    width: 30%;
+
+}
+
+
+
+/* =========================
+   REDES
+   DEZEMBRO
+========================= */
+
+.roadmap-barra.redes {
+
+    left: 75%;
+
+    width: 25%;
+
+}
+
+
+
+/* =========================
+   INGLÊS
+   CONTÍNUO
+========================= */
+
+.roadmap-barra.ingles {
+
+    left: 0%;
+
+    width: 100%;
+
+}
+
+
+
+/* =========================
+   CORES DAS BARRAS
+========================= */
+
+.roadmap-barra.concluido {
+
+    background: var(--verde);
+
+}
+
+
+
+.roadmap-barra.andamento {
+
+    background: var(--laranja);
+
+}
+
+
+
+.roadmap-barra.planejado {
+
+    background: #b7b7b7;
+
+}
+
+
+
+.roadmap-barra.continuo {
+
+    background: var(--preto);
+
+}
+
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+    .container-desenvolvimento {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+
+    .container-menu {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+
+    .card-menu {
+
+        min-height: 60px;
+
+        grid-template-columns: 30px 1fr;
+
+    }
+
+
+
+    .card-menu .seta {
+
+        display: none;
+
+    }
+
+
+
+    .conteudo-interno {
+
+        padding: 25px;
+
+    }
+
+
+
+    .roadmap {
+
+        padding: 25px 15px;
+
+        overflow-x: auto;
+
+    }
+
+
+
+    .roadmap-cabecalho,
+    .roadmap-linha {
+
+        min-width: 600px;
+
+    }
+
+}
+
+
+
+@media (max-width: 550px) {
+
+    .capa {
+
+        min-height: 280px;
+
+    }
+
+
+
+    .capa h1 {
+
+        font-size: 38px;
+
+    }
+
+
+
+    .container-desenvolvimento {
+
+        width: 94%;
+
+        margin: 35px auto;
+
+    }
+
+
+
+    .container-menu {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .card-menu {
+
+        grid-template-columns: 38px 1fr 25px;
+
+    }
+
+
+
+    .card-menu .seta {
+
+        display: block;
+
+    }
+
+
+
+    .conteudo-interno {
+
+        padding: 22px;
+
+    }
+
+
+
+    .lista-trilhas li {
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .status-concluido {
+
+        margin-left: auto;
+
+    }
+
+}
+
