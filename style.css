@@ -16,10 +16,9 @@
 
     --laranja: #fa5d00;
 
-    --verde: #6959a8;
+    --verde: #4A9B68;
 
 }
-
 
 
 /* =========================
@@ -27,11 +26,14 @@
 ========================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
 
 
 /* =========================
@@ -52,7 +54,6 @@ body {
 }
 
 
-
 /* =========================
    PÁGINA
 ========================= */
@@ -64,7 +65,6 @@ body {
     min-height: 100vh;
 
 }
-
 
 
 /* =========================
@@ -84,7 +84,6 @@ body {
 }
 
 
-
 .container-capa {
 
     width: 90%;
@@ -94,7 +93,6 @@ body {
     margin: 0 auto;
 
 }
-
 
 
 .ano {
@@ -114,7 +112,6 @@ body {
 }
 
 
-
 .capa h1 {
 
     color: var(--branco);
@@ -130,7 +127,6 @@ body {
 }
 
 
-
 .identificacao {
 
     display: flex;
@@ -144,7 +140,6 @@ body {
 }
 
 
-
 .identificacao strong {
 
     color: var(--branco);
@@ -154,7 +149,6 @@ body {
 }
 
 
-
 .identificacao span {
 
     color: #bdbdbd;
@@ -162,7 +156,6 @@ body {
     font-size: 14px;
 
 }
-
 
 
 /* =========================
@@ -188,7 +181,6 @@ body {
 }
 
 
-
 /* =========================
    MENU
 ========================= */
@@ -204,13 +196,11 @@ body {
 }
 
 
-
 .container-card {
 
     width: 100%;
 
 }
-
 
 
 .card-menu {
@@ -246,13 +236,11 @@ body {
 }
 
 
-
 .card-menu:hover {
 
     transform: translateX(4px);
 
 }
-
 
 
 .card-menu.ativo {
@@ -264,7 +252,6 @@ body {
 }
 
 
-
 .card-menu .nome {
 
     font-size: 15px;
@@ -272,7 +259,6 @@ body {
     font-weight: 700;
 
 }
-
 
 
 .card-menu .seta {
@@ -288,13 +274,11 @@ body {
 }
 
 
-
 .card-menu.ativo .seta {
 
     transform: rotate(45deg);
 
 }
-
 
 
 .card-menu .icone {
@@ -306,7 +290,6 @@ body {
     justify-content: flex-start;
 
 }
-
 
 
 .card-menu .icone svg {
@@ -328,7 +311,6 @@ body {
 }
 
 
-
 /* =========================
    CONTEÚDO
 ========================= */
@@ -340,7 +322,6 @@ body {
 }
 
 
-
 .conteudo {
 
     display: none;
@@ -348,13 +329,11 @@ body {
 }
 
 
-
 .conteudo.aberto {
 
     display: block;
 
 }
-
 
 
 .conteudo-interno {
@@ -366,7 +345,6 @@ body {
     padding: 40px;
 
 }
-
 
 
 .conteudo-interno p {
@@ -382,7 +360,6 @@ body {
 }
 
 
-
 /* =========================
    TRILHAS
 ========================= */
@@ -394,24 +371,12 @@ body {
 }
 
 
-
-.lista-trilhas {
-
-    list-style: none;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-
+.lista-trilhas li:not(:last-child) {
+    border-bottom: 1px solid var(--cinza);
 }
 
 
-
 .lista-trilhas li {
-
-    position: relative;
 
     min-height: 42px;
 
@@ -428,7 +393,6 @@ body {
 }
 
 
-
 .trilha-icone {
 
     width: 28px;
@@ -440,7 +404,6 @@ body {
 }
 
 
-
 .lista-trilhas strong {
 
     font-size: 14px;
@@ -448,7 +411,6 @@ body {
     white-space: nowrap;
 
 }
-
 
 
 .trilha-seta {
@@ -462,7 +424,6 @@ body {
 }
 
 
-
 .trilha-descricao {
 
     color: var(--texto);
@@ -472,29 +433,44 @@ body {
 }
 
 
-
 /* =========================
-   STATUS CONCLUÍDO
+   STATUS DAS TRILHAS
 ========================= */
 
-.status-concluido {
-
-    float: right;
+.status-trilha {
 
     margin-left: auto;
 
-    padding-left: 8px;
+    padding-left: 15px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1;
+    font-weight: 600;
 
     white-space: nowrap;
 
-    display: inline-block;
+}
+
+
+.status-trilha.a-iniciar {
+
+    color: var(--texto);
 
 }
 
+
+.status-trilha.andamento {
+
+    color: #2563eb;
+
+}
+
+
+.status-trilha.concluido {
+
+    color: var(--verde);
+
+}
 
 
 /* =========================
@@ -512,7 +488,6 @@ body {
     padding: 35px 30px;
 
 }
-
 
 
 /* =========================
@@ -544,7 +519,6 @@ body {
 }
 
 
-
 .roadmap-cabecalho span:first-child {
 
     visibility: hidden;
@@ -552,9 +526,8 @@ body {
 }
 
 
-
 /* =========================
-   LINHAS
+   LINHAS DO ROADMAP
 ========================= */
 
 .roadmap-linha {
@@ -574,7 +547,6 @@ body {
 }
 
 
-
 .roadmap-label {
 
     padding-right: 15px;
@@ -586,7 +558,6 @@ body {
     font-weight: 700;
 
 }
-
 
 
 /* =========================
@@ -608,8 +579,9 @@ body {
 }
 
 
-
-/* Divisão dos meses */
+/* =========================
+   DIVISÃO DOS MESES
+========================= */
 
 .roadmap-timeline::before {
 
@@ -644,7 +616,6 @@ body {
 }
 
 
-
 /* =========================
    BARRAS
 ========================= */
@@ -664,7 +635,6 @@ body {
 }
 
 
-
 /* =========================
    DYNATRACE
    01/09 → 06/09
@@ -677,7 +647,6 @@ body {
     width: 5%;
 
 }
-
 
 
 /* =========================
@@ -694,7 +663,6 @@ body {
 }
 
 
-
 /* =========================
    KUBERNETES
    MEADOS DE OUTUBRO → INÍCIO DE NOVEMBRO
@@ -707,7 +675,6 @@ body {
     width: 25%;
 
 }
-
 
 
 /* =========================
@@ -724,7 +691,6 @@ body {
 }
 
 
-
 /* =========================
    REDES
    DEZEMBRO
@@ -737,7 +703,6 @@ body {
     width: 25%;
 
 }
-
 
 
 /* =========================
@@ -754,7 +719,6 @@ body {
 }
 
 
-
 /* =========================
    CORES DAS BARRAS
 ========================= */
@@ -766,21 +730,18 @@ body {
 }
 
 
-
 .roadmap-barra.andamento {
 
-    background: var(--laranja);
+    background: #2563eb;
 
 }
-
 
 
 .roadmap-barra.planejado {
 
-    background: #b7b7b7;
+    background: var(--texto);
 
 }
-
 
 
 .roadmap-barra.continuo {
@@ -788,7 +749,6 @@ body {
     background: var(--preto);
 
 }
-
 
 
 /* =========================
@@ -806,7 +766,6 @@ body {
     }
 
 
-
     .container-menu {
 
         display: grid;
@@ -815,7 +774,6 @@ body {
             repeat(3, 1fr);
 
     }
-
 
 
     .card-menu {
@@ -827,13 +785,11 @@ body {
     }
 
 
-
     .card-menu .seta {
 
         display: none;
 
     }
-
 
 
     .conteudo-interno {
@@ -843,7 +799,6 @@ body {
     }
 
 
-
     .roadmap {
 
         padding: 25px 15px;
@@ -851,7 +806,6 @@ body {
         overflow-x: auto;
 
     }
-
 
 
     .roadmap-cabecalho,
@@ -864,7 +818,6 @@ body {
 }
 
 
-
 @media (max-width: 550px) {
 
     .capa {
@@ -874,13 +827,11 @@ body {
     }
 
 
-
     .capa h1 {
 
         font-size: 38px;
 
     }
-
 
 
     .container-desenvolvimento {
@@ -892,13 +843,11 @@ body {
     }
 
 
-
     .container-menu {
 
         grid-template-columns: 1fr;
 
     }
-
 
 
     .card-menu {
@@ -908,13 +857,11 @@ body {
     }
 
 
-
     .card-menu .seta {
 
         display: block;
 
     }
-
 
 
     .conteudo-interno {
@@ -924,7 +871,6 @@ body {
     }
 
 
-
     .lista-trilhas li {
 
         flex-wrap: wrap;
@@ -932,12 +878,10 @@ body {
     }
 
 
-
-    .status-concluido {
+    .status-trilha {
 
         margin-left: auto;
 
     }
 
 }
-
